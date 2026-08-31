@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  images: {
-    // 静的エクスポートではサーバー側の画像最適化が使えないため無効にする
-    unoptimized: true,
-  },
+  // SSRに切り替えるため、静的エクスポート向けの設定は削除する
 };
 
 export default nextConfig;
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
