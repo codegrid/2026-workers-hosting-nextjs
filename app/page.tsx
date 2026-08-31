@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <nav className={styles.nav}>
+        <Link href="/ssr">オンデマンドレンダリングのページへ</Link>
+      </nav>
       <main className={styles.main}>
         <Image
           className={styles.logo}
