@@ -1,0 +1,9 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json", // このファイルのスキーマを宣言
+	"name": "2026-workers-hosting-nextjs", // Workersアプリケーションの名前（任意）
+	"compatibility_date": "2026-08-28", // workerdランタイムに関する指定
+	"assets": {
+		"directory": "./out", // 静的に配信するディレクトリ（Astroでは ./dist だった）
+		"not_found_handling": "404-page", // どのアセットにも一致しない場合はビルド済み404ページを返す
+	},
+}
